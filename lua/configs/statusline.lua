@@ -43,18 +43,18 @@ local M = {}
 --
 ---- Diagnostics function
 --M.diagnostics = utils.diagnostics
---
----- LSP function
+
+-- LSP function
 M.lsp = function()
   return "%#St_Lsp#" .. utils.lsp() .. M.flutter_app_version() .. " "
 end
---
----- Flutter App Version function
+
+-- Flutter App Version function
 M.flutter_app_version = function()
   local app_version = vim.g.flutter_tools_decorations and vim.g.flutter_tools_decorations.app_version
   return app_version or "[No Version]" -- Fallback if app_version is not set
 end
---
+
 ---- CWD function
 --M.cwd = function()
 --  local icon = "%#St_cwd_icon#" .. "󰉋 "
