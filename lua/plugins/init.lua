@@ -17,6 +17,6 @@ return {
   { import = "plugins.override.dap" },
 
   -- Flutter
-  { import = "plugins.override.flutterTools" },  -- Flutter run, tools, etc.
+  { import = "plugins.override.flutterTools" }, -- Flutter run, tools, etc.
   { import = "plugins.override.dartVimPlugin" }, -- dart format and syntax
 }

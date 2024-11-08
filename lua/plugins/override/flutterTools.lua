@@ -4,6 +4,7 @@ return {
     "nvim-lua/plenary.nvim",
     "stevearc/dressing.nvim",
   },
+  lazy = false,
   config = true,
   decorations = {
     statusline = {
