@@ -11,12 +11,12 @@ return {
   { import = "plugins.override.blankline" },
 
   -- Formatters for multiple languages
-  --{ import = "plugins.override.conform" },
+  { import = "plugins.override.conform" },
 
   -- DAP (Debug Adapter Protocol)
   { import = "plugins.override.dap" },
 
   -- Flutter
-  { import = "plugins.override.flutterTools" },
-  { import = "plugins.override.dartVimPlugin" },
+  { import = "plugins.override.flutterTools" },  -- Flutter run, tools, etc.
+  { import = "plugins.override.dartVimPlugin" }, -- dart format and syntax
 }
