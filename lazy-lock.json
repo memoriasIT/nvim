@@ -31,6 +31,7 @@
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "f22496dfdd46da4d571f5254c72eff65ff5a1c27" },
   "snacks.nvim": { "branch": "main", "commit": "18686a41ff670734c52f7b6a55df0a7f89a30eb5" },
   "telescope.nvim": { "branch": "master", "commit": "85922dde3767e01d42a08e750a773effbffaea3e" },
+  "todo-comments.nvim": { "branch": "main", "commit": "ae0a2afb47cf7395dc400e5dc4e05274bf4fb9e0" },
   "ui": { "branch": "v3.0", "commit": "25319f3686b4f980458859b30244f373d158635c" },
   "undotree": { "branch": "master", "commit": "78b5241191852ffa9bb5da5ff2ee033160798c3b" },
   "volt": { "branch": "main", "commit": "ff954757fdaf72da0dedd77bdf74718ea846f989" },

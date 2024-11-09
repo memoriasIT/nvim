@@ -43,6 +43,9 @@ return {
   -- Snacks - Quality of life addons
   { import = "plugins.override.snacks" },
 
+  -- To dos
+  { import = "plugins.override.todo" },
+
   -- Telescope
   { import = "plugins.override.telescope" },
 
