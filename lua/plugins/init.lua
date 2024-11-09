@@ -24,11 +24,17 @@ return {
   -- Git
   { import = "plugins.override.gitSigns" },
 
+  -- Illuminate same words in the text
+  { import = "plugins.override.vimIlluminate" },
+
   -- File explorer
   { import = "plugins.override.nvimTree" },
 
   -- TreeSitter - Parse code to go around
   { import = "plugins.override.nvimTreeSitter" },
+
+  -- Undotree - see changes and go back to old ones
+  { import = "plugins.override.undoTree" },
 
   -- Snacks - Quality of life addons
   { import = "plugins.override.snacks" },
