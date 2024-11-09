@@ -32,6 +32,9 @@ return {
     -- although users may expected this functionality. null is treated like false.
     evaluate_to_string_in_debug_views = true,
     register_configurations = function(_)
+      -- Setup flutter integration into telescope
+      require("telescope").load_extension "flutter"
+
       require("dap").configurations.dart = {
         --put here config that you would find in .vscode/launch.json
       }
