@@ -46,6 +46,9 @@ return {
   -- Snacks - Quality of life addons
   { import = "plugins.override.snacks" },
 
+  -- Trouble - lint fixes etc.
+  { import = "plugins.override.trouble" },
+
   -- To dos
   { import = "plugins.override.todo" },
 
