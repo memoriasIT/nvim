@@ -21,6 +21,9 @@ return {
   { import = "plugins.override.dartVimPlugin" }, -- dart format and syntax
   -- TODO: Setup dap for flutter
 
+  -- Git
+  { import = "plugins.override.gitSigns" },
+
   -- File explorer
   { import = "plugins.override.nvimTree" },
 
@@ -32,7 +35,4 @@ return {
 
   -- Which Key
   { import = "plugins.override.whichKey" },
-
-  -- Git
-  { import = "plugins.override.gitSigns" },
 }
