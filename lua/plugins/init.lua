@@ -40,6 +40,9 @@ return {
   -- Undotree - see changes and go back to old ones
   { import = "plugins.override.undoTree" },
 
+  -- Persistence - Save sessions for next time
+  { import = "plugins.override.persistence" },
+
   -- Raimbow brackets/parenthesis
   { import = "plugins.override.raimbowDelimiters" },
 
