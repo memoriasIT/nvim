@@ -22,6 +22,9 @@ return {
   { import = "plugins.override.dartVimPlugin" }, -- dart format and syntax
   -- TODO: Setup dap for flutter
 
+  -- Harpoon - navigate between files/buffers/whatever
+  { import = "plugins.override.harpoon" },
+
   -- Git
   { import = "plugins.override.gitSigns" },
 

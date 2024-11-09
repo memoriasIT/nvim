@@ -1,3 +1,5 @@
+--- Utils from https://github.com/mgastonportillo/nvchad-config/blob/main/lua/gale/utils.lua
+---
 ---@class Utils
 --- Check if any value is a table
 ---@field is_tbl fun(v: any): boolean
