@@ -6,6 +6,7 @@ return {
       require "configs.lspconfig"
     end,
   },
+
   -- Overrides (from override folder)
   -- Add tabs indicator
   { import = "plugins.override.blankline" },
@@ -35,6 +36,9 @@ return {
 
   -- Undotree - see changes and go back to old ones
   { import = "plugins.override.undoTree" },
+
+  -- Raimbow brackets/parenthesis
+  { import = "plugins.override.raimbowDelimiters" },
 
   -- Snacks - Quality of life addons
   { import = "plugins.override.snacks" },
