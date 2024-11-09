@@ -20,4 +20,19 @@ return {
   { import = "plugins.override.flutterTools" }, -- Flutter run, tools, etc.
   { import = "plugins.override.dartVimPlugin" }, -- dart format and syntax
   -- TODO: Setup dap for flutter
+
+  -- File explorer
+  { import = "plugins.override.nvimTree" },
+
+  -- TreeSitter - Parse code to go around
+  { import = "plugins.override.nvimTreeSitter" },
+
+  -- Telescope
+  { import = "plugins.override.telescope" },
+
+  -- Which Key
+  { import = "plugins.override.whichKey" },
+
+  -- Git
+  { import = "plugins.override.gitSigns" },
 }
