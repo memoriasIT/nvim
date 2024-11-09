@@ -8,7 +8,7 @@ local M = {}
 local statusline = require "configs.statusline"
 
 M.base46 = {
-  theme = "onedark",
+  theme = "onenord",
 
   -- hl_override = {
   -- 	Comment = { italic = true },
