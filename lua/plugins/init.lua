@@ -30,6 +30,9 @@ return {
   -- TreeSitter - Parse code to go around
   { import = "plugins.override.nvimTreeSitter" },
 
+  -- Snacks - Quality of life addons
+  { import = "plugins.override.snacks" },
+
   -- Telescope
   { import = "plugins.override.telescope" },
 
