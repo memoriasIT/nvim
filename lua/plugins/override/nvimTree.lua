@@ -10,6 +10,7 @@ return {
 
     local nvtree = require "nvim-tree"
     local api = require "nvim-tree.api"
+    local imageOpen = require "custom.imageOpen"
 
     -- Add custom mappings
     local function custom_on_attach(bufnr)
@@ -22,6 +23,7 @@ return {
       map("n", "+", api.tree.change_root_to_node, opts "CD")
       map("n", "?", api.tree.toggle_help, opts "Help")
       map("n", "<ESC>", api.tree.close, opts "Close")
+      map("n", "O", imageOpen.openWithQuickLook, opts "Open with Quick Look")
     end
 
     local path_sep = package.config:sub(1, 1)
