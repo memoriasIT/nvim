@@ -27,13 +27,13 @@ return {
       toml = { "taplo" },
       yaml = { "yamlfmt" },
     },
-    format_on_save = function(bufnr)
-      -- Disable with a global or buffer-local variable
-      if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-        return
-      end
-      return { timeout_ms = 1000, lsp_fallback = true }
-    end,
+    -- format_on_save = function(bufnr)
+    --   -- Disable with a global or buffer-local variable
+    --   if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+    --     return
+    --   end
+    --   return { timeout_ms = 1000, lsp_fallback = true }
+    -- end,
     -- Conform will notify you when a formatter errors
     notify_on_error = true,
     -- Conform will notify you when no formatters are available for the buffer
