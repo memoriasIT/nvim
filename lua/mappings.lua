@@ -16,8 +16,8 @@ map("n", "<C-k>", "<C-w>k", { desc = "Move window up" })
 map("n", "<C-l>", "<C-w>l", { desc = "Move window right" })
 
 -- buffer go next and prev
-map("n", "bh", ":bprev<CR>", { desc = "Go to prev buffer" })
-map("n", "bl", ":bnext<CR>", { desc = "Go to next buffer" })
+--map("n", "bh", ":bprev<CR>", { desc = "Go to prev buffer" })
+--map("n", "bl", ":bnext<CR>", { desc = "Go to next buffer" })
 
 -- Workarounds for my dumb fingers
 -- Credits to https://github.com/mgastonportillo/nvchad-config/blob/main/lua/gale/aliases.lua
