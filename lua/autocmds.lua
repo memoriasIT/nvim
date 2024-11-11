@@ -1,0 +1,9 @@
+--https://github.com/mgastonportillo/nvchad-config/blob/main/lua/gale/autocmds.lua
+-- autocmd({ "BufEnter", "FileType" }, {
+--   desc = "Prevent auto-comment on new line.",
+--   pattern = "*",
+--   group = augroup("NoNewLineComment", { clear = true }),
+--   command = [[
+--     setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+--   ]],
+-- })

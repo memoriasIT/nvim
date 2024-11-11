@@ -16,6 +16,13 @@ return {
       project_config = true,
     },
   },
+  lsp = {
+    settings = {
+      dart = {
+        lineLength = 120,
+      },
+    },
+  },
   dev_tools = {
     autostart = false, -- autostart devtools server if not detected
     auto_open_browser = false, -- Automatically opens devtools in the browser

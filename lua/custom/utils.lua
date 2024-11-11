@@ -10,6 +10,10 @@
 
 local M = {}
 
+M.add_alias = function(target_cmd, alias)
+  vim.cmd("ca " .. alias .. " " .. target_cmd)
+end
+
 M.is_tbl = function(v)
   if type(v) == "table" then
     return true
