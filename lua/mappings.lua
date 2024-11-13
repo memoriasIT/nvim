@@ -11,8 +11,8 @@ local alias = require("custom.utils").add_alias
 -- Resize window using <shift> arrow keys
 map("n", "<S-Up>", "<cmd>resize +2<CR>")
 map("n", "<S-Down>", "<cmd>resize -2<CR>")
-map("n", "<S-Left>", "<cmd>vertical resize -2<CR>")
-map("n", "<S-Right>", "<cmd>vertical resize +2<CR>")
+map("n", "<S-Left>", "<cmd>vertical resize +2<CR>")
+map("n", "<S-Right>", "<cmd>vertical resize -2<CR>")
 
 -- Better window navigation
 map("n", "<C-h>", "<C-w>h", { desc = "Move window left" })
