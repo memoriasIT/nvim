@@ -25,3 +25,10 @@ alias("qa", "Qa")
 alias("qa", "QA")
 alias("q", "Q")
 alias("w", "W")
+
+-- Use <leader>+C and <leader>+V to copy/paste to the system clipboard
+-- Enable clipboard support if it's not already enabled
+vim.opt.clipboard = "unnamedplus"
+vim.keymap.set("v", "<leader>c", '"+y', { desc = "Copy to system clipboard" })
+vim.keymap.set("n", "<leader>v", '"+p', { desc = "Paste from system clipboard" })
+vim.keymap.set("v", "<leader>v", '"+p', { desc = "Paste from system clipboard" })
