@@ -1,3 +1,4 @@
+
 return {
   "akinsho/flutter-tools.nvim",
   dependencies = {
@@ -41,6 +42,9 @@ return {
     register_configurations = function(_)
       -- Setup flutter integration into telescope
       require("telescope").load_extension "flutter"
+
+      -- local map = vim.keymap.set
+      -- TODO add mappings
 
       require("dap").configurations.dart = {
         --put here config that you would find in .vscode/launch.json

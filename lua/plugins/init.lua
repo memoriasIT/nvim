@@ -34,6 +34,9 @@ return {
   -- Illuminate same words in the text
   { import = "plugins.override.vimIlluminate" },
 
+  -- Testing
+  { import = "plugins.override.neotest" },
+
   -- File explorer
   { import = "plugins.override.nvimTree" },
 

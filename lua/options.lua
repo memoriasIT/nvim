@@ -1,7 +1,9 @@
 require "nvchad.options"
+local opt = vim.opt
 
--- add yours here!
+opt.relativenumber = true
 
--- local o = vim.o
--- o.cursorlineopt ='both' -- to enable cursorline!
-vim.opt.relativenumber = true
+-- Access system clipboard
+opt.clipboard = "unnamedplus"
+
+
