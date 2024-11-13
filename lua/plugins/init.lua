@@ -11,6 +11,9 @@ return {
   -- Add tabs indicator
   { import = "plugins.override.blankline" },
 
+  -- Navigate through camelCaseText
+  { import = "plugins.override.camelCaseMotion" },
+
   -- Formatters for multiple languages
   { import = "plugins.override.conform" },
 
