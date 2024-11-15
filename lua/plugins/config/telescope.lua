@@ -3,7 +3,7 @@ return {
   "nvim-telescope/telescope.nvim",
   opts = function(_, opts)
     local map = vim.keymap.set
-    local pickers = require("custom.telescope").pickers
+    local pickers = require("custom.telescopeUtils").pickers
     local SIZES = {
       HEIGHT = 0.75,
       WIDTH = 0.66,

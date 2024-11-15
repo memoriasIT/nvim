@@ -5,7 +5,7 @@
 ---@type ChadrcConfig
 local M = {}
 
-local statusline = require "configs.statusline"
+local statusline = require "configs.ui.statusline"
 
 M.base46 = {
   theme = "onenord",

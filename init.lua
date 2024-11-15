@@ -29,9 +29,10 @@ require("lazy").setup({
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
-require "options"
 require "nvchad.autocmds"
 require "configs.autocmds"
+require "configs.options"
+require "configs.ui.ui"
 
 vim.schedule(function()
   require "configs.mappings"
