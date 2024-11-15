@@ -3,7 +3,11 @@ local autocmd = vim.api.nvim_create_autocmd
 local utils = require "custom.utils"
 local buf_map = utils.buf_map
 
---
+-- ┏┓   ┓
+-- ┃ ┏┓┏┫┏┓
+-- ┗┛┗┛┗┻┗
+--     Code
+
 --https://github.com/mgastonportillo/nvchad-config/blob/main/lua/gale/autocmds.lua
 autocmd({ "BufEnter", "FileType" }, {
   desc = "Prevent auto-comment on new line.",
@@ -13,6 +17,11 @@ autocmd({ "BufEnter", "FileType" }, {
     setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   ]],
 })
+
+-- ┳┓  ┏┏
+-- ┣┫┓┏╋╋┏┓┏┓┏
+-- ┻┛┗┻┛┛┗ ┛ ┛
+--     Buffers
 
 -- https://github.com/mgastonportillo/nvchad-config/blob/main/lua/gale/autocmds.lua
 autocmd("Filetype", {
@@ -30,38 +39,25 @@ autocmd("Filetype", {
   end,
 })
 
+-- ┓ ┏•   ┓
+-- ┃┃┃┓┏┓┏┫┏┓┓┏┏┏
+-- ┗┻┛┗┛┗┗┻┗┛┗┻┛┛
+-- Windows
+
+-- TODO does not work with LazyGit
 -- github.com/mgastonportillo/nvchad-config/blob/main/lua/gale/autocmds.lua
-autocmd("VimResized", {
-  desc = "Auto resize panes when resizing nvim window.",
-  pattern = "*",
-  group = augroup("VimAutoResize", { clear = true }),
-  command = [[ tabdo wincmd = ]],
-})
-
--- https://github.com/mgastonportillo/nvchad-config/blob/main/lua/gale/autocmds.lua
-autocmd("ModeChanged", {
-  desc = "Strategically disable diagnostics to focus on editing tasks.",
-  pattern = { "n:i", "n:v", "i:v" },
-  group = augroup("UserDiagnostic", { clear = true }),
-  callback = function()
-    vim.diagnostic.enable(false)
-  end,
-})
-
--- https://github.com/mgastonportillo/nvchad-config/blob/main/lua/gale/autocmds.lua
-autocmd("ModeChanged", {
-  desc = "Enable diagnostics upon exiting insert mode to resume feedback.",
-  pattern = "i:n",
-  group = augroup("UserDiagnostic", { clear = true }),
-  callback = function()
-    vim.diagnostic.enable(true)
-  end,
-})
+-- autocmd("VimResized", {
+--   desc = "Auto resize panes when resizing nvim window.",
+--   pattern = "*",
+--   group = augroup("VimAutoResize", { clear = true }),
+--   command = [[ tabdo wincmd = ]],
+-- })
 
 autocmd("FileType", {
   desc = "Define windows to close with 'q'",
   pattern = {
     "empty",
+    "gitsigns-blame",
     "help",
     "startuptime",
     "qf",
@@ -80,4 +76,30 @@ autocmd("FileType", {
     nnoremap <buffer><silent> q :close<CR>
     set nobuflisted
   ]],
+})
+
+-- ┳┓•          •
+-- ┃┃┓┏┓┏┓┏┓┏┓┏╋┓┏┏
+-- ┻┛┗┗┻┗┫┛┗┗┛┛┗┗┗┛
+--       ┛ Diagnostics
+
+local userDiagnosticGroup = augroup("UserDiagnostic", { clear = true })
+-- https://github.com/mgastonportillo/nvchad-config/blob/main/lua/gale/autocmds.lua
+autocmd("ModeChanged", {
+  desc = "Strategically disable diagnostics to focus on editing tasks.",
+  pattern = { "n:i", "n:v", "i:v" },
+  group = userDiagnosticGroup,
+  callback = function()
+    vim.diagnostic.enable(false)
+  end,
+})
+
+-- https://github.com/mgastonportillo/nvchad-config/blob/main/lua/gale/autocmds.lua
+autocmd("ModeChanged", {
+  desc = "Enable diagnostics upon exiting insert mode to resume feedback.",
+  pattern = "i:n",
+  group = userDiagnosticGroup,
+  callback = function()
+    vim.diagnostic.enable(true)
+  end,
 })
