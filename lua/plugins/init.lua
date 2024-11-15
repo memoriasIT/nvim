@@ -7,63 +7,66 @@ return {
     end,
   },
 
-  -- Overrides (from override folder)
+  -- configs (from override folder)
   -- Add tabs indicator
-  { import = "plugins.override.blankline" },
+  { import = "plugins.config.blankline" },
 
   -- Navigate through camelCaseText
-  { import = "plugins.override.camelCaseMotion" },
+  { import = "plugins.config.camelCaseMotion" },
 
   -- Formatters for multiple languages
-  { import = "plugins.override.conform" },
+  { import = "plugins.config.conform" },
 
   -- DAP (Debug Adapter Protocol)
-  { import = "plugins.override.dap" },
+  { import = "plugins.config.dap" },
+
+  -- Dashboard
+  { import = "plugins.config.dashboard.dashboard" },
 
   -- Flutter
-  { import = "plugins.override.flutterTools" }, -- Flutter run, tools, etc.
-  { import = "plugins.override.dartVimPlugin" }, -- dart format and syntax
+  { import = "plugins.config.flutter.flutterTools" }, -- Flutter run, tools, etc.
+  { import = "plugins.config.flutter.dartVimPlugin" }, -- dart format and syntax
   -- TODO: Setup dap for flutter
 
   -- Harpoon - navigate between files/buffers/whatever
-  { import = "plugins.override.harpoon" },
+  { import = "plugins.config.harpoon" },
 
   -- Git
-  { import = "plugins.override.gitSigns" },
+  { import = "plugins.config.gitSigns" },
 
   -- Illuminate same words in the text
-  { import = "plugins.override.vimIlluminate" },
+  { import = "plugins.config.vimIlluminate" },
 
   -- Testing
-  { import = "plugins.override.neotest" },
+  { import = "plugins.config.neotest" },
 
   -- File explorer
-  { import = "plugins.override.nvimTree" },
+  { import = "plugins.config.nvimTree" },
 
   -- TreeSitter - Parse code to go around
-  { import = "plugins.override.nvimTreeSitter" },
+  { import = "plugins.config.nvimTreeSitter" },
 
   -- Undotree - see changes and go back to old ones
-  { import = "plugins.override.undoTree" },
+  { import = "plugins.config.undoTree" },
 
   -- Persistence - Save sessions for next time
-  { import = "plugins.override.persistence" },
+  { import = "plugins.config.persistence" },
 
   -- Raimbow brackets/parenthesis
-  { import = "plugins.override.raimbowDelimiters" },
+  { import = "plugins.config.raimbowDelimiters" },
 
   -- Snacks - Quality of life addons
-  { import = "plugins.override.snacks" },
+  { import = "plugins.config.snacks" },
 
   -- Trouble - lint fixes etc.
-  { import = "plugins.override.trouble" },
+  { import = "plugins.config.trouble" },
 
   -- To dos
-  { import = "plugins.override.todo" },
+  { import = "plugins.config.todo" },
 
   -- Telescope
-  { import = "plugins.override.telescope" },
+  { import = "plugins.config.telescope" },
 
   -- Which Key
-  { import = "plugins.override.whichKey" },
+  { import = "plugins.config.whichKey" },
 }

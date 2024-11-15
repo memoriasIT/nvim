@@ -35,7 +35,7 @@ return {
       },
       config = {
         -- header = vim.split(logo, "\n"),
-        header = require "plugins.dashboard.logos",
+        header = require "plugins.config.dashboard.logos",
         -- stylua: ignore
         center = {
          { action = "Telescope find_files",                                     desc = " Find file",       icon = " ", key = "f" },
