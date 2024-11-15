@@ -49,6 +49,12 @@ return {
       yaml = { "yamlfmt" },
     },
     format_on_save = function(bufnr)
+      -- Disable autoformat on dart (it uses it's own format)
+      local ignore_filetypes = { "dart" }
+      if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
+        return
+      end
+
       -- Disable with a global or buffer-local variable
       if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
         return
