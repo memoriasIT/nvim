@@ -1,3 +1,4 @@
+-- https://github.com/mgastonportillo/nvchad-config/blob/main/lua/plugins/override/nvim-tree.lua
 ---@type NvPluginSpec
 return {
   "nvim-tree/nvim-tree.lua",

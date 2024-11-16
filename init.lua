@@ -30,9 +30,12 @@ dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
 require "nvchad.autocmds"
+
 require "configs.autocmds"
 require "configs.options"
 require "configs.ui.ui"
+
+require "custom.userCommands"
 
 vim.schedule(function()
   require "configs.mappings"
