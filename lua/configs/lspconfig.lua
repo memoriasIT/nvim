@@ -1,7 +1,7 @@
+local M = {}
+
 -- Inspired by https://github.com/mgastonportillo/nvchad-config/blob/main/lua/gale/lsp.lua
 ---@alias OnAttach fun(client: vim.lsp.Client, bufnr: integer)
----@alias OnInit fun(client: vim.lsp.Client, initialize_result: lsp.InitializeResult)
-
 ---@type OnAttach
 local on_attach = function(_, bufnr)
   local map = function(mode, lhs, rhs, opts)
@@ -39,8 +39,20 @@ local on_attach = function(_, bufnr)
   end, { desc = "LSP rename" })
 end
 
+---@param custom_on_attach? OnAttach
+---@return OnAttach # A new function that combines default and custom on_attach behaviour
+M.generate_on_attach = function(custom_on_attach)
+  return function(client, bufnr)
+    on_attach(client, bufnr)
+
+    if custom_on_attach then
+      custom_on_attach(client, bufnr)
+    end
+  end
+end
+
 ---@type OnInit
-local on_init = function(client, _)
+M.on_init = function(client, _)
   if client.supports_method "textDocument/semanticTokens" then
     client.server_capabilities.semanticTokensProvider = nil
   end
@@ -65,20 +77,28 @@ capabilities.textDocument.completion.completionItem = {
   },
 }
 
--- load defaults i.e lua_lsp
-require("nvchad.configs.lspconfig").defaults()
+M.capabilities = capabilities
 
-local lspconfig = require "lspconfig"
+M.lsp = {
+  vtsls = {
+    inlay_hints_settings = {
+      parameterNames = {
+        enabled = "all",
+      },
+      parameterTypes = {
+        enabled = true,
+      },
+      variableTypes = {
+        enabled = true,
+      },
+      propertyDeclarationTypes = {
+        enabled = true,
+      },
+      functionLikeReturnTypes = {
+        enabled = true,
+      },
+    },
+  },
+}
 
--- EXAMPLE
-local servers = { "html", "cssls" }
-local nvlsp = require "nvchad.configs.lspconfig"
-
--- lsps with default config
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = on_attach,
-    on_init = on_init,
-    capabilities = capabilities,
-  }
-end
+return M
