@@ -51,22 +51,22 @@ return {
 
     map("n", "<C-A>", function()
       harpoon:list():add()
-    end, { desc = "Add to harpoon", group = "Harpoon" })
+    end, { desc = "[Harpoon] Add to harpoon" })
 
     map("n", "<C-S-A>", function()
       harpoon:list():remove()
-    end, { desc = "Remove from harpoon", group = "Harpoon" })
+    end, { desc = "[Harpoon] Remove from harpoon" })
 
     map("n", "<C-S-P>", function()
       harpoon:list():prev()
-    end, { desc = "Previous Harpooned buffer", group = "Harpoon" })
+    end, { desc = "[Harpoon] Previous Harpooned buffer" })
 
     map("n", "<C-S-N>", function()
       harpoon:list():next()
-    end, { desc = "Next Harpooned buffer", group = "Harpoon" })
+    end, { desc = "[Harpoon] Next Harpooned buffer" })
 
     map("n", "<C-e>", function()
       toggle_telescope(harpoon:list(), conf)
-    end, { desc = "Open harpoon window", group = "Harpoon" })
+    end, { desc = "[Harpoon] Open harpoon window" })
   end,
 }
