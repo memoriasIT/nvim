@@ -34,6 +34,7 @@ require "nvchad.autocmds"
 require "configs.autocmds"
 require "configs.options"
 require "configs.ui.ui"
+require "configs.filetypes"
 
 require "custom.userCommands"
 

@@ -47,6 +47,9 @@ return {
       typescriptreact = { "prettier" },
       toml = { "taplo" },
       yaml = { "yamlfmt" },
+      yml = { "yamlfmt" },
+      ruby = { "rubocop" },
+      fastfile = { "rubocop" },
     },
     format_on_save = function(bufnr)
       -- Disable autoformat on dart (it uses it's own format)
