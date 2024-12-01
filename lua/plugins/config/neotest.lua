@@ -11,15 +11,15 @@
 --     lazy = false,
 --      keys = {
 --       {"<leader>t", "", desc = "+test"},
---       { "<leader>tt", function() require("neotest").run.run(vim.fn.expand("%")) end, desc = "Run File (Neotest)" },
---       { "<leader>tT", function() require("neotest").run.run(vim.uv.cwd()) end, desc = "Run All Test Files (Neotest)" },
---       { "<leader>tr", function() require("neotest").run.run() end, desc = "Run Nearest (Neotest)" },
---       { "<leader>tl", function() require("neotest").run.run_last() end, desc = "Run Last (Neotest)" },
---       { "<leader>ts", function() require("neotest").summary.toggle() end, desc = "Toggle Summary (Neotest)" },
---       { "<leader>to", function() require("neotest").output.open({ enter = true, auto_close = true }) end, desc = "Show Output (Neotest)" },
---       { "<leader>tO", function() require("neotest").output_panel.toggle() end, desc = "Toggle Output Panel (Neotest)" },
---       { "<leader>tS", function() require("neotest").run.stop() end, desc = "Stop (Neotest)" },
---       { "<leader>tw", function() require("neotest").watch.toggle(vim.fn.expand("%")) end, desc = "Toggle Watch (Neotest)" },
+--       { "<leader>tt", function() require("neotest").run.run(vim.fn.expand("%")) end, desc = "Run File " },
+--       { "<leader>tT", function() require("neotest").run.run(vim.uv.cwd()) end, desc = "Run All Test Files " },
+--       { "<leader>tr", function() require("neotest").run.run() end, desc = "Run Nearest " },
+--       { "<leader>tl", function() require("neotest").run.run_last() end, desc = "Run Last " },
+--       { "<leader>ts", function() require("neotest").summary.toggle() end, desc = "Toggle Summary " },
+--       { "<leader>to", function() require("neotest").output.open({ enter = true, auto_close = true }) end, desc = "Show Output " },
+--       { "<leader>tO", function() require("neotest").output_panel.toggle() end, desc = "Toggle Output Panel " },
+--       { "<leader>tS", function() require("neotest").run.stop() end, desc = "Stop " },
+--       { "<leader>tw", function() require("neotest").watch.toggle(vim.fn.expand("%")) end, desc = "Toggle Watch " },
 --     },
 --     config = function()
 --     require('neotest').setup({
@@ -86,63 +86,63 @@ return {
           function()
             require("neotest").run.run(vim.fn.expand "%")
           end,
-          desc = "Run File (Neotest)",
+          desc = "[Test] Run File",
         },
         {
           "<leader>tT",
           function()
             require("neotest").run.run(vim.uv.cwd())
           end,
-          desc = "Run All Test Files (Neotest)",
+          desc = "[Test] Run All Test Files",
         },
         {
           "<leader>tr",
           function()
             require("neotest").run.run()
           end,
-          desc = "Run Nearest (Neotest)",
+          desc = "[Test] Run Nearest",
         },
         {
           "<leader>tl",
           function()
             require("neotest").run.run_last()
           end,
-          desc = "Run Last (Neotest)",
+          desc = "[Test] Run Last",
         },
         {
           "<leader>ts",
           function()
             require("neotest").summary.toggle()
           end,
-          desc = "Toggle Summary (Neotest)",
+          desc = "[Test] Toggle Summary",
         },
         {
           "<leader>to",
           function()
             require("neotest").output.open { enter = true, auto_close = true }
           end,
-          desc = "Show Output (Neotest)",
+          desc = "[Test] Show Output",
         },
         {
           "<leader>tO",
           function()
             require("neotest").output_panel.toggle()
           end,
-          desc = "Toggle Output Panel (Neotest)",
+          desc = "[Test] Toggle Output Panel",
         },
         {
           "<leader>tS",
           function()
             require("neotest").run.stop()
           end,
-          desc = "Stop (Neotest)",
+          desc = "[Test] Stop",
         },
         {
           "<leader>tw",
           function()
             require("neotest").watch.toggle(vim.fn.expand "%")
           end,
-          desc = "Toggle Watch (Neotest)",
+          desc = "[Test] Toggle Watch",
         },
       },
     }

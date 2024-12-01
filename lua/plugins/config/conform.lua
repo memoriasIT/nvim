@@ -8,7 +8,7 @@ return {
     -- <leader>fm -> Format file
     vim.keymap.set("n", "<leader>fm", function()
       require("conform").format { lsp_fallback = true }
-    end, { desc = "General format file" })
+    end, { desc = "[Code] General format file" })
 
     -- Disable formatting with "FormatDisable"
     vim.api.nvim_create_user_command("FormatDisable", function(args)

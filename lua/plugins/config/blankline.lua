@@ -18,6 +18,6 @@ return {
           vim.api.nvim_feedkeys("_", "n", true)
         end
       end
-    end, { desc = "Blankline Jump to current context" })
+    end, { desc = "[Code] Jump to start of indentation" })
   end,
 }

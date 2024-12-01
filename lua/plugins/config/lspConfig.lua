@@ -51,9 +51,17 @@ return {
       signs = { text = { [x.ERROR] = "", [x.WARN] = "", [x.INFO] = "", [x.HINT] = "󰌵" } },
       float = { border = border },
       underline = true,
+      severity_sort = true,
     }
 
     -- Gutter
     vim.fn.sign_define("CodeActionSign", { text = "󰉁", texthl = "CodeActionSignHl" })
+
+    vim.api.nvim_set_keymap(
+      "n",
+      "<leader>d",
+      "<cmd>lua vim.diagnostic.open_float()<CR>",
+      { noremap = true, silent = true, desc = "[Code] See diagnostic error" }
+    )
   end,
 }

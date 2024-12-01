@@ -12,31 +12,31 @@ local on_attach = function(_, bufnr)
     vim.keymap.set(mode, lhs, rhs, options)
   end
 
-  map("n", "gd", vim.lsp.buf.definition, { desc = "LSP go to definition" })
-  map("n", "gi", vim.lsp.buf.implementation, { desc = "LSP go to implementation" })
-  map("n", "<leader>gd", vim.lsp.buf.declaration, { desc = "LSP go to declaration" })
-  map("n", "<leader>sh", vim.lsp.buf.signature_help, { desc = "LSP show signature help" })
-  map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, { desc = "LSP add workspace folder" })
-  map("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, { desc = "LSP remove workspace folder" })
-  map("n", "<leader>gr", vim.lsp.buf.references, { desc = "LSP show references" })
-  map("n", "<leader>gt", vim.lsp.buf.type_definition, { desc = "LSP go to type definition" })
+  map("n", "gd", vim.lsp.buf.definition, { desc = "[LSP] Go to definition" })
+  map("n", "gi", vim.lsp.buf.implementation, { desc = "[LSP] Go to implementation" })
+  map("n", "<leader>gd", vim.lsp.buf.declaration, { desc = "[LSP] Go to declaration" })
+  map("n", "<leader>sh", vim.lsp.buf.signature_help, { desc = "[LSP] Show signature help" })
+  map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, { desc = "[LSP] Add workspace folder" })
+  map("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, { desc = "[LSP] Remove workspace folder" })
+  map("n", "<leader>gr", vim.lsp.buf.references, { desc = "[LSP] Show references" })
+  map("n", "<leader>gt", vim.lsp.buf.type_definition, { desc = "[LSP] Go to type definition" })
 
   map("n", "<leader>wl", function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-  end, { desc = "LSP list workspace folders" })
+  end, { desc = "[LSP] list workspace folders" })
 
   map(
     "x",
     "<leader>ca",
     "<Cmd>lua vim.lsp.buf.range_code_action()<CR>",
-    { noremap = true, silent = true, desc = "Open code actions" }
+    { noremap = true, silent = true, desc = "[LSP] Open code actions" }
   )
 
-  map("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", { noremap = true, silent = true, desc = "See info on hover" })
+  map("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", { noremap = true, silent = true, desc = "[LSP] See info on hover" })
 
   map("n", "<leader>ra", function()
     require "nvchad.lsp.renamer"()
-  end, { desc = "LSP rename" })
+  end, { desc = "[LSP] Rename" })
 end
 
 ---@param custom_on_attach? OnAttach

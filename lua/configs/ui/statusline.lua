@@ -50,6 +50,7 @@ M.lsp = function()
 end
 
 -- Flutter App Version function
+-- TODO this is not working, maybe because of project config
 M.flutter_app_version = function()
   local app_version = vim.g.flutter_tools_decorations and vim.g.flutter_tools_decorations.app_version
   return app_version or "[No Version]" -- Fallback if app_version is not set
