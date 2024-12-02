@@ -37,9 +37,9 @@ map("n", "<C-u>", "<C-u>zz", { desc = "[Motions] Scroll up and center" })
 -- Use <leader>+C and <leader>+V to copy/paste to the system clipboard
 -- Enable clipboard support if it's not already enabled
 vim.opt.clipboard = "unnamedplus"
-vim.keymap.set("v", "<leader>c", '"+y', { desc = "[Clipboard] Copy to system clipboard" })
-vim.keymap.set("n", "<leader>v", '"+p', { desc = "[Clipboard] Paste from system clipboard" })
-vim.keymap.set("v", "<leader>v", '"+p', { desc = "[Clipboard] Paste from system clipboard" })
+map("v", "<leader>c", '"+y', { desc = "[Clipboard] Copy to system clipboard" })
+map("n", "<leader>v", '"+p', { desc = "[Clipboard] Paste from system clipboard" })
+map("v", "<leader>v", '"+p', { desc = "[Clipboard] Paste from system clipboard" })
 
 -- Paste over currently selected text without yanking it
 map("v", "p", '"_dp')
