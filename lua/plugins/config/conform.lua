@@ -50,6 +50,7 @@ return {
       yml = { "yamlfmt" },
       ruby = { "rubocop" },
       fastfile = { "rubocop" },
+      plist = { "plutil" },
     },
     format_on_save = function(bufnr)
       -- Disable autoformat on dart (it uses it's own format)
@@ -69,6 +70,13 @@ return {
     -- Conform will notify you when no formatters are available for the buffer
     notify_no_formatters = true,
     formatters = {
+      -- plutil is a tool available on macOS, but any XML formatter would work
+      plutil = {
+        command = "plutil", -- Explicitly specify the command
+        args = { "-convert", "xml1", "-o", "-", "-" },
+        stdin = true,
+        stdout = true,
+      },
       yamlfmt = {
         args = { "-formatter", "retain_line_breaks_single=true" },
       },
