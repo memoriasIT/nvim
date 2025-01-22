@@ -23,6 +23,7 @@ return {
       "markdown_inline",
       "vim",
       "vimdoc",
+      "xml",
     },
     auto_install = true,
     indent = { enable = true },

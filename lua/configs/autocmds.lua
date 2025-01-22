@@ -18,6 +18,12 @@ autocmd({ "BufEnter", "FileType" }, {
   ]],
 })
 
+-- Plist files should be detected as XML
+autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.plist",
+  command = "set filetype=xml",
+})
+
 -- ┳┓  ┏┏
 -- ┣┫┓┏╋╋┏┓┏┓┏
 -- ┻┛┗┻┛┛┗ ┛ ┛
