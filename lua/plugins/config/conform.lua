@@ -51,6 +51,7 @@ return {
       ruby = { "rubocop" },
       fastfile = { "rubocop" },
       plist = { "plutil" },
+      xml = { "plutil" },
     },
     format_on_save = function(bufnr)
       -- Disable autoformat on dart (it uses it's own format)
