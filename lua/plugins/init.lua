@@ -11,6 +11,7 @@ return {
 
   -- DAP (Debug Adapter Protocol)
   { import = "plugins.config.dap" },
+  { import = "plugins.config.dapUi" },
 
   -- Dashboard
   { import = "plugins.config.dashboard.dashboard" },
