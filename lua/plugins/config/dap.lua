@@ -1,28 +1,3 @@
--- return {
---   "mfussenegger/nvim-dap",
---   ft = { "dart" }, -- Only load for Dart files
---   config = function()
---     local dap = require "dap"
---
---     dap.adapters.dart = {
---       type = "executable",
---       command = "dart",
---       args = { "debug_adapter" },
---     }
---
---     dap.configurations.dart = {
---       {
---         type = "dart",
---         request = "launch",
---         name = "Launch Dart Program",
---         program = "${file}",
---         cwd = "${workspaceFolder}",
---         args = { "--help" },
---       },
---     }
---   end,
--- }
-
 return {
   "mfussenegger/nvim-dap",
   dependencies = { "theHamsta/nvim-dap-virtual-text" },
@@ -39,7 +14,7 @@ return {
       linehl = "debugPC",
       numhl = "",
     })
-    vim.keymap.set("n", "<F5>", function()
+    vim.keymap.set("n", "<F9>", function()
       require("dap").continue()
     end)
     vim.keymap.set("n", "<F10>", function()
