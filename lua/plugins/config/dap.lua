@@ -14,7 +14,7 @@ return {
       linehl = "debugPC",
       numhl = "",
     })
-    vim.keymap.set("n", "<F9>", function()
+    vim.keymap.set("n", "<F5>", function()
       require("dap").continue()
     end)
     vim.keymap.set("n", "<F10>", function()
