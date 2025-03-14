@@ -57,7 +57,7 @@ map("n", ";", ":", { desc = "[QoL] CMD enter command mode" })
 -- map("i", "jk", "<ESC>", { desc = "[QoL] Go to normal mode with jk" })
 
 -- Redo the last executed command with <leader>rd
-set_keymap("n", "<leader>rd", ":@:<CR>", { noremap = true, silent = true, desc = "[QoL] Re-execute last command" })
+set_keymap("n", "<leader>rd", ":@:<CR>", { desc = "[QoL] Re-execute last command" })
 
 -- Workarounds for my dumb fingers
 -- Credits to https://github.com/mgastonportillo/nvchad-config/blob/main/lua/gale/aliases.lua
