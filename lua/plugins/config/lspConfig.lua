@@ -7,12 +7,6 @@ return {
     local glsp = require "configs.lspconfig"
 
     local servers = {
-      dartls = {
-        settings = {
-          -- TODO does this work?
-          lineLength = 120,
-        },
-      },
       bashls = {
         on_attach = function(client, bufnr)
           local filename = vim.api.nvim_buf_get_name(bufnr)
