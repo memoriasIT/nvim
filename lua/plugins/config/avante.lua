@@ -12,7 +12,7 @@ return {
     -- this file can contain specific instructions for your project
     instructions_file = "avante.md",
     -- for example
-    debug = true,
+    debug = false,
     provider = "copilot",
     auto_suggestions_provider = nil,
 
