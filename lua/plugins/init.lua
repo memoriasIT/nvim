@@ -67,4 +67,7 @@ return {
 
   -- Which Key
   { import = "plugins.config.whichKey" },
+
+  -- AI
+  { import = "plugins.config.avante" },
 }
