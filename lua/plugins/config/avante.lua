@@ -9,22 +9,25 @@ return {
   ---@module 'avante'
   ---@type avante.Config
   opts = {
-    -- add any opts here
     -- this file can contain specific instructions for your project
     instructions_file = "avante.md",
     -- for example
-    provider = "claude",
-    providers = {
-      claude = {
-        endpoint = "https://api.anthropic.com",
-        model = "claude-3-5-haiku-latest",
-        timeout = 30000, -- Timeout in milliseconds
-        extra_request_body = {
-          temperature = 0.75,
-          max_tokens = 8192,
-        },
-      },
-    },
+    debug = true,
+    provider = "copilot",
+    auto_suggestions_provider = nil,
+
+    -- provider = "claude",
+    -- providers = {
+    --   claude = {
+    --     endpoint = "https://api.anthropic.com",
+    --     model = "claude-3-5-haiku-latest",
+    --     timeout = 30000, -- Timeout in milliseconds
+    --     extra_request_body = {
+    --       temperature = 0.75,
+    --       max_tokens = 8192,
+    --     },
+    --   },
+    -- },
   },
   dependencies = {
     "nvim-lua/plenary.nvim",

@@ -70,4 +70,5 @@ return {
 
   -- AI
   { import = "plugins.config.avante" },
+  { import = "plugins.config.copilot" },
 }
