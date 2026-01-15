@@ -3,8 +3,8 @@ return {
   config = function()
     dofile(vim.g.base46_cache .. "lsp")
 
-    local lspconfig = require "lspconfig"
     local glsp = require "configs.lspconfig"
+    local nvlsp = require "nvchad.configs.lspconfig"
 
     local servers = {
       bashls = {
@@ -22,22 +22,21 @@ return {
             hint = { enable = true },
             telemetry = { enable = false },
             diagnostics = { globals = { "bit", "vim", "it", "describe", "before_each", "after_each" } },
-            -- workspace libraries are set via lazydev
           },
         },
       },
     }
 
-    local nvlsp = require "nvchad.configs.lspconfig"
-
     for name, opts in pairs(servers) do
       opts.on_init = glsp.on_init
-      opts.on_attach = nvlsp.on_attach --glsp.generate_on_attach(opts.on_attach)
+      opts.on_attach = nvlsp.on_attach
       opts.capabilities = glsp.capabilities
-      lspconfig[name].setup(opts)
+
+      vim.lsp.config(name, opts)
+      vim.lsp.enable(name)
     end
 
-    -- LSP UI
+    -- LSP UI (Diagnostics) remains mostly the same
     local border = "rounded"
     local x = vim.diagnostic.severity
     vim.diagnostic.config {
@@ -51,10 +50,10 @@ return {
     -- Gutter
     vim.fn.sign_define("CodeActionSign", { text = "󰉁", texthl = "CodeActionSignHl" })
 
-    vim.api.nvim_set_keymap(
+    vim.keymap.set(
       "n",
       "<leader>d",
-      "<cmd>lua vim.diagnostic.open_float()<CR>",
+      vim.diagnostic.open_float,
       { noremap = true, silent = true, desc = "[Code] See diagnostic error" }
     )
   end,

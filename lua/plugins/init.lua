@@ -1,5 +1,11 @@
 -- Sorted alpahbetically
 return {
+  -- NVIM Notify
+  { import = "plugins.config.nvim-notify" },
+
+  -- LSP config
+  { import = "plugins.config.lspConfig" },
+
   -- Add tabs indicator
   { import = "plugins.config.blankline" },
 
@@ -25,9 +31,6 @@ return {
 
   -- Git
   { import = "plugins.config.gitSigns" },
-
-  -- LSP config
-  { import = "plugins.config.lspConfig" },
 
   -- Testing
   { import = "plugins.config.neotest" },
@@ -64,4 +67,8 @@ return {
 
   -- Which Key
   { import = "plugins.config.whichKey" },
+
+  -- AI
+  { import = "plugins.config.avante" },
+  { import = "plugins.config.copilot" },
 }

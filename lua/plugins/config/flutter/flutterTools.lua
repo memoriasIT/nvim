@@ -1,3 +1,4 @@
+local lspconfig = require "configs.lspconfig"
 return {
   "akinsho/flutter-tools.nvim",
   dependencies = {
@@ -17,7 +18,29 @@ return {
     },
   },
   lsp = {
+    color = { -- show the derived colours for dart variables
+      enabled = true,
+      background = false, -- highlight the background
+      background_color = { r = 0, g = 0, b = 0 },
+      foreground = false, -- highlight the foreground
+      virtual_text = true, -- show the highlight using virtual text
+      virtual_text_str = "■", -- the virtual text character to highlight
+    },
+    on_init = function()
+      local map = vim.keymap.set
+    end,
+    -- on_init = lspconfig.on_init(),
+    capabilities = lspconfig.capabilities,
     settings = {
+      renameFilesWithClasses = "always",
+      analysisExcludedFolders = {
+        ".dart_tool",
+        "/Users/lorenzo/.pub-cache/",
+        "/Users/lorenzo/fvm/",
+      },
+      completeFunctionCalls = true,
+      experimentalRefactors = true,
+      allowOpenUri = true,
       dart = {
         lineLength = 120,
       },
